@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: davidgamero-test
+  name: davidgamero-test3
   labels:
-    app: davidgamero-test
-  namespace: namespace-workflow-1678733499614
+    app: davidgamero-test3
+  namespace: namespace-workflow-1688155414377
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: davidgamero-test
+      app: davidgamero-test3
   template:
     metadata:
       labels:
-        app: davidgamero-test
+        app: davidgamero-test3
     spec:
       containers:
-        - name: davidgamero-test
-          image: acrworkflow1678733499614.azurecr.io/image-workflow-1678733499614:latest
+        - name: davidgamero-test3
+          image: acrworkflow1688155414377.azurecr.io/image-workflow-1688155414377:latest
           ports:
             - containerPort: 1323
