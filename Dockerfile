@@ -5,8 +5,9 @@ EXPOSE 1323
 WORKDIR /go/src/app
 COPY . .
 
-RUN go mod vendor
-RUN go build -v -o app
+ARG GO111MODULE=off
+RUN go get -d -v ./...
+RUN go build -v -o app ./...
 RUN mv ./app /go/bin/
 
 CMD ["app"]
