@@ -1,0 +1,8 @@
+image:
+    repository: meeceacr.azurecr.io/go-echo-1
+    pullPolicy: Always
+    tag: latest
+service:
+    annotations: {}
+    type: LoadBalancer
+    port: "80"
