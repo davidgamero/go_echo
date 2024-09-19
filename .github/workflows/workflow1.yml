@@ -39,8 +39,8 @@ on:
 
 env:
   ACR_RESOURCE_GROUP: dgtest
-  AZURE_CONTAINER_REGISTRY: acrworkflow1726768410299
-  CONTAINER_NAME: image-workflow-1726768410299
+  AZURE_CONTAINER_REGISTRY: acrworkflow1726768769817
+  CONTAINER_NAME: image-workflow-1726768769817
   CLUSTER_RESOURCE_GROUP: dgtest
   CLUSTER_NAME: dgtest
   DEPLOYMENT_MANIFEST_PATH: |
@@ -48,7 +48,7 @@ env:
     manifests/service.yaml
   DOCKER_FILE: Dockerfile
   BUILD_CONTEXT_PATH: ./
-  NAMESPACE: go-echo
+  NAMESPACE: namespace-workflow-1726768769817
 
 jobs:
   buildImage:

@@ -5,7 +5,7 @@ metadata:
   labels:
     app: workflow1
     kubernetes.azure.com/generator: devhub
-  namespace: go-echo
+  namespace: namespace-workflow-1726768769817
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: workflow1
-          image: acrworkflow1726768410299.azurecr.io/image-workflow-1726768410299:latest
+          image: acrworkflow1726768769817.azurecr.io/image-workflow-1726768769817:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 1323
+            - containerPort: 80

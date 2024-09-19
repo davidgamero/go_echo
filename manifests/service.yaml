@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: workflow1
-  namespace: go-echo
+  namespace: namespace-workflow-1726768769817
   labels:
     kubernetes.azure.com/generator: devhub
 spec:
@@ -11,5 +11,5 @@ spec:
     app: workflow1
   ports:
     - protocol: TCP
-      port: 1323
-      targetPort: 1323
+      port: 80
+      targetPort: 80
