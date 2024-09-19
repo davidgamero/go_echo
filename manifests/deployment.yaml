@@ -1,29 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  name: workflow1
   labels:
-    app: go-echo
-    kubernetes.azure.com/generator: draft
-  name: go-echo
-  namespace: default
+    app: workflow1
+    kubernetes.azure.com/generator: devhub
+  namespace: go-echo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: go-echo
-  strategy: {}
+      app: workflow1
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: go-echo
+        app: workflow1
     spec:
       containers:
-      - image: davidgamerotest2.azurecr.io/go-echo
-        imagePullPolicy: Always
-        name: go-echo
-        ports:
-        - containerPort: 1323
-        resources: {}
-status: {}
+        - name: workflow1
+          image: acrworkflow1726768410299.azurecr.io/image-workflow-1726768410299:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 1323
