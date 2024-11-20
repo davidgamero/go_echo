@@ -1,6 +1,4 @@
-FROM golang:1.20 AS builder
-ENV PORT 80
-EXPOSE 80
+FROM golang:1.23 AS builder
 
 WORKDIR /build
 COPY go.mod go.sum ./
@@ -9,6 +7,10 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -v -o app-binary
 
 FROM gcr.io/distroless/static-debian12
+
+ENV PORT=1323
+EXPOSE 1323
+
 WORKDIR /app
 COPY --from=builder /build/app-binary . 
 CMD ["/app/app-binary"]
