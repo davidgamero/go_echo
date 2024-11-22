@@ -1,8 +1,0 @@
-image:
-    repository: dgtest.azurecr.io/echo
-    pullPolicy: Always
-    tag: latest
-service:
-    annotations: {}
-    type: LoadBalancer
-    port: "1323"
