@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fffffff
+  namespace: namespace-workflow-1744674179810
+  labels:
+    app.kubernetes.io/name: fffffff
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: fffffff
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
