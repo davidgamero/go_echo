@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fffffff
-  namespace: namespace-workflow-1744674179810
+  name: aaa
+  namespace: namespace-workflow-1746220857397
   labels:
-    app.kubernetes.io/name: fffffff
+    app.kubernetes.io/name: aaa
     kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app.kubernetes.io/name: fffffff
+    app.kubernetes.io/name: aaa
   ports:
     - protocol: TCP
       port: 80

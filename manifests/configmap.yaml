@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: fffffff-config
-  namespace: namespace-workflow-1744674179810
+  name: aaa-config
+  namespace: namespace-workflow-1746220857397
   labels:
-    app.kubernetes.io/name: fffffff
+    app.kubernetes.io/name: aaa
     kubernetes.azure.com/generator: devhub
 data:

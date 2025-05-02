@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fffffff
+  name: aaa
   labels:
-    app.kubernetes.io/name: fffffff
+    app.kubernetes.io/name: aaa
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1744674179810
+  namespace: namespace-workflow-1746220857397
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: fffffff
+      app.kubernetes.io/name: aaa
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: fffffff
+        app.kubernetes.io/name: aaa
     spec:
       containers:
-        - name: fffffff
-          image: dgtestregistry.azurecr.io/image-workflow-1744674179810:latest
+        - name: aaa
+          image: dgtestregistry.azurecr.io/image-workflow-1746220857397:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
@@ -31,7 +31,7 @@ spec:
               memory: "1Gi"
           envFrom:
             - configMapRef:
-                name: fffffff-config
+                name: aaa-config
             - secretRef:
                 name: secret-ref
                 optional: true
@@ -83,11 +83,11 @@ spec:
               topologyKey: kubernetes.io/hostname
               labelSelector:
                 matchLabels:
-                  app.kubernetes.io/name: fffffff
+                  app.kubernetes.io/name: aaa
       topologySpreadConstraints:
         - maxSkew: 1
           topologyKey: kubernetes.io/hostname
           whenUnsatisfiable: ScheduleAnyway
           labelSelector:
             matchLabels:
-              app.kubernetes.io/name: fffffff
+              app.kubernetes.io/name: aaa
